@@ -1,0 +1,5 @@
+@mixin maxWidth($q) {
+    @media screen and (max-width: $q) {
+        @contact;
+    }
+}

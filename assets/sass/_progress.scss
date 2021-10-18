@@ -1,0 +1,20 @@
+.progress {
+    background: #263548;
+    color: #fff;
+    //
+    &__container {
+        padding-bottom: 48px;
+    }
+    &__title {
+        text-transform: uppercase;
+        margin: 0;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+        padding: 58px 0;
+    }
+    &__data {
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
+}

@@ -1,0 +1,59 @@
+.footer {
+    background: #0d1d31;
+    width: 100%;
+    color: #fff;
+    // height: 500px;
+    &__container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        display: grid;
+        grid-template-columns: 33.3333% 16.6667% 25% 25%;
+    }
+    &__content {
+        position: relative;
+        padding: 0 15px;
+        width: 100%;
+        // font-family: "Lato-Light", sans-serif;
+    }
+    &__fanpage {
+        padding: 0 15px 0 0;
+    }
+    &__title {
+        color: #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-family: "Lato-Bold", sans-serif;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+    &__item {
+        margin-bottom: 6px;
+    }
+    &__link {
+        color: #fff;
+    }
+    &__item::before {
+        content: "■";
+        color: #fdb813;
+        display: inline-block;
+        width: 1em;
+        transform: translateY(-2px);
+    }
+    &__icons {
+        display: flex;
+        column-gap: 10px;
+        margin-top: 30px;
+        a {
+            border: 1px solid #999;
+            padding: 8px;
+            border-radius: 50%;
+        }
+    }
+    @include maxWidth(768px) {
+        &__container {
+            grid-template-columns: 100%;
+        }
+    }
+}

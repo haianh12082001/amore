@@ -1,0 +1,97 @@
+.feedback {
+    background-image: url(../img/feedback.png);
+    width: 100%;
+    // height: 500px;
+    &__container {
+        // padding: 0 15px;
+        position: relative;
+    }
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        color: #fff;
+        font-family: "Fester-Bold", sans-serif;
+        padding: 48px 0 24px;
+    }
+    &__list {
+        padding: 0 50px;
+    }
+    &__slide {
+        padding: 0 40px;
+    }
+
+    &__item {
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+        background: rgba(13, 29, 49, 0.5);
+        padding: 30px 20px 0 60px;
+    }
+    @include maxWidth(1024px) {
+        &__slide {
+            padding: 0;
+        }
+    }
+    @include maxWidth(768px) {
+        button {
+            width: 45px;
+            height: 45px;
+        }
+    }
+}
+.content__top {
+    display: flex;
+    margin-bottom: 25px;
+    align-items: center;
+    // padding-bottom: 25px;
+}
+.content__info {
+    margin-left: 20px;
+}
+.content__name {
+    display: -webkit-box;
+    font-size: 24px;
+    color: #fdb813;
+}
+.content__occ {
+    font-size: 14px;
+}
+.content__top img {
+    width: 80px;
+    display: inline-block;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.content__body {
+    margin-bottom: 25px;
+    height: 105px;
+    text-align: justify;
+    font-size: 14px;
+}
+.feedback__btn {
+    text-align: right;
+    margin-right: 20px;
+}
+.feedback__btn i {
+    background: #fdb813;
+    padding: 12px 20px;
+    color: #000;
+}
+.feedback button {
+    background: transparent;
+    border: 1px solid #fff;
+    width: 45px;
+    height: 45px;
+}
+.prevFeedback {
+    position: absolute;
+    top: 45%;
+    left: 0;
+}
+.nextFeedback {
+    position: absolute;
+    right: 0;
+    top: 45%;
+}
