@@ -167,6 +167,16 @@ img {
   display: block;
 }
 
+.header__item--list::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  left: 0;
+  top: -30px;
+  background-color: transparent;
+}
+
 .container {
   max-width: 1230px;
   padding: 0 15px;

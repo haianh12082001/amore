@@ -138,9 +138,9 @@
 .header__item--list::after {
     content: "";
     position: absolute;
-    height: 30px;
-    width: 100%;
+    height: 50px;
+    width: 50px;
     left: 0;
-    top: -30px;
-    background-color: transparent;
+    top: -50px;
+    background-color: red;
 }
