@@ -35,7 +35,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px 15px 0 15px;
+        padding-top: 20px;
         max-width: 25%;
         width: 100%;
     }
@@ -119,17 +119,6 @@
     &__name {
         text-transform: uppercase;
     }
-    &__item::after {
-        content: "";
-        position: absolute;
-        top: 20%;
-        bottom: 20%;
-        right: 0;
-        border: 1px dashed #000;
-    }
-    &__item:last-child::after {
-        border: none;
-    }
     @include maxWidth(768px) {
         // &__content {
         //     // display: ;
@@ -158,7 +147,14 @@
 //     height: 100%;
 //     // z-index: 99;
 // }
-
+.introduce__item::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    right: 0;
+    border: 1px dashed #000;
+}
 .introduce__line:nth-child(2) {
     left: 20%;
 }
