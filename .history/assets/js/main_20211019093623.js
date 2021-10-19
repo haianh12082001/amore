@@ -147,7 +147,7 @@ $(document).ready(function () {
     ///show menu///
     $('.bars__mobi').click(function(){
         $('.header__list').toggleClass('active');
-        $('.fa.fa-bars').toggleClass('fas fa-times');
+        $('.fa.fa-bars').toggleClass('.fas.fa-times');
     })
 
 });
