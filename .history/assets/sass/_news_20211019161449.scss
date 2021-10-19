@@ -37,10 +37,9 @@
         height: 260px;
         display: inherit;
     }
-    &__text {
+    &__content {
+        padding: 15px;
         background: #0d1d31;
-        max-width: 100%;
-        padding: 20px;
     }
     &__kind {
         text-align: center;

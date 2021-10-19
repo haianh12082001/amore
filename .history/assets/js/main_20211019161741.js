@@ -109,7 +109,6 @@ $(document).ready(function () {
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
-        dots:true,
         speed: 2000,
         autoplaySpeed: 3000,
         responsive: [
