@@ -318,7 +318,14 @@ img {
   }
   .product__item {
     width: 31.2%;
-    padding: 20px;
+    padding: 10px;
+  }
+  .product__text {
+    padding: 10px 5px;
+  }
+  .product__title {
+    font-size: 14px;
+    height: 42px;
   }
 }
 
