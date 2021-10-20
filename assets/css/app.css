@@ -424,6 +424,10 @@ p {
   outline: none;
 }
 
+.slick-dots .slick-active button {
+  background: #fdb813;
+}
+
 .banner {
   display: block;
   position: relative;
