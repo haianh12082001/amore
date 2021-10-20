@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato";
   margin: 0;
   padding: 0;
   width: 100%;
@@ -78,7 +78,7 @@ img {
 }
 .header__link {
   font-size: 16px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Lato";
   color: #ffff;
   font-weight: 700;
 }
@@ -159,10 +159,6 @@ img {
   justify-content: space-between;
 }
 
-.home__2x {
-  font-size: 1.5em;
-}
-
 .header__item:hover .header__item--list {
   display: block;
 }
@@ -177,6 +173,71 @@ img {
   background-color: transparent;
 }
 
+.home__2x {
+  font-size: 2em;
+}
+
+.header__form {
+  position: fixed;
+  top: 110px;
+  width: 300px;
+  top: 17%;
+  right: 0;
+  z-index: 2;
+  display: none;
+}
+
+.header__form.active {
+  display: block;
+}
+
+.header__input {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__control {
+  background: #1a1a1a;
+  border-color: #666;
+  color: #fff;
+  display: block;
+  padding: 6px 12px;
+  border: 1px solid #ced4da;
+  flex: 1 1 auto;
+}
+
+.header__search {
+  background: #1a1a1a;
+  border-color: #666;
+  color: #fff;
+  display: block;
+  padding: 4px 12px;
+  border: 1px solid #ced4da;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .header__form {
+    top: 70px;
+    width: 100%;
+  }
+}
+@font-face {
+  font-family: "Fester";
+  font-display: swap;
+  src: url("/assets/fonts/word/Fester Bold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-display: swap;
+  src: url("/assets/fonts/word/Lato Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato-light";
+  font-display: swap;
+  src: url("/assets/fonts/word/Lato Light.ttf") format("truetype");
+}
 .container {
   max-width: 1230px;
   padding: 0 15px;
@@ -225,14 +286,21 @@ img {
   height: 180px;
 }
 .product__text {
-  margin-left: 16px;
-  margin-right: 48px;
+  padding: 15px 20px;
 }
 .product__title {
-  margin-top: 17px;
   font-size: 18px;
   font-weight: 700;
+  height: 53px;
   text-transform: uppercase;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin-bottom: 8px;
+  color: #ffff;
+  line-height: 1.5;
 }
 .product__des {
   display: none;
@@ -242,6 +310,7 @@ img {
   font-size: 14px;
   font-weight: 700;
   color: #fff;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .product {
@@ -251,6 +320,29 @@ img {
     width: 31.2%;
     padding: 20px;
   }
+}
+
+.product__title:hover {
+  color: #ef9139;
+}
+
+.product__watch:hover {
+  color: #ef9139;
+}
+
+.product__watch::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -1%;
+  left: 0;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.product__watch:hover::before {
+  width: 100%;
 }
 
 .slick__paging {
@@ -778,7 +870,8 @@ p {
   margin-bottom: 24px;
 }
 .project1__des {
-  font-size: 14px;
+  font-size: 14.4px;
+  line-height: 24px;
 }
 .project1__submit {
   display: inline-block;
@@ -945,7 +1038,7 @@ p {
 .service__extend a::before {
   content: "";
   position: absolute;
-  background: #fdb813;
+  background: #0d1d31;
   top: 50%;
   left: -5%;
   height: 100%;
@@ -953,26 +1046,128 @@ p {
   opacity: 0.6;
 }
 
+.service__item:hover {
+  background: #fdb813;
+}
+
+.service__item:hover .service__img {
+  filter: brightness(0) invert(1);
+  transform: scale(1.1);
+}
+
 .progress {
   background: #263548;
   color: #fff;
-}
-.progress__container {
   padding-bottom: 48px;
 }
 .progress__title {
-  text-transform: uppercase;
-  margin: 0;
+  font-family: "Fester-Bold", sans-serif;
+  font-size: 1.75rem;
   text-align: center;
-  font-size: 30px;
-  font-weight: 700;
-  padding: 58px 0;
+  padding: 3rem 0;
 }
-.progress__data {
-  display: grid;
-  grid-template-columns: 25% 75%;
+.progress__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-around;
+  padding-bottom: 50px;
+  border-bottom: 2px solid #dee2e6;
+}
+.progress__link {
+  background: #0d1d31;
+  padding: 0 2rem;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  width: 170px;
+  height: 130px;
+  font-size: 1.375rem;
+  font-family: "Fester";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: 0;
+  font-weight: 700;
+}
+.progress__link span::after {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border: 2px #d5d8da solid;
+  background: #fff;
+  border-radius: 50%;
+  left: 50%;
+  bottom: -65px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.progress__link span::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border: 2px #d5d8da solid;
+  background: #000;
+  border-radius: 50%;
+  left: 50%;
+  bottom: -60px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.progress__link::before {
+  position: absolute;
+  content: "";
+  height: 50px;
+  width: 2px;
+  background: #d5d8da;
+  left: 50%;
+  bottom: -50px;
+  transform: translateX(-50%);
+}
+.progress__tab {
+  padding: 50px 10% 0;
+  color: #fff;
+  font-size: 1rem;
+}
+.progress__content > .progress__tab {
+  display: none;
+}
+.progress__content > .active {
+  display: block;
 }
 
+.progress__link.active {
+  background: linear-gradient(#fdb813, #fd8313);
+  color: #000;
+}
+
+.progress__link.active span::after {
+  border-color: #fdb813;
+}
+
+.progress__link.active span::before {
+  background: linear-gradient(#fdb813, #fd8313);
+  border-color: #fdb813;
+}
+
+@media screen and (max-width: 768px) {
+  .progress__list {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .progress__item {
+    margin: 0 15px;
+  }
+}
 .contact {
   width: 100%;
   position: relative;
@@ -1258,6 +1453,8 @@ textarea .form__control {
 }
 .footer p {
   font-size: 14px;
+  font-family: "Lato-light";
+  line-height: 1.5;
 }
 .footer__item {
   margin-bottom: 6px;

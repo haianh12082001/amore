@@ -1,0 +1,47 @@
+.progress {
+    background: #263548;
+    color: #fff;
+    padding-bottom: 48px;
+    &__title {
+        font-family: "Fester-Bold", sans-serif;
+        font-size: 1.75rem;
+        text-align: center;
+        padding: 3rem 0;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: space-around;
+        padding-bottom: 50px;
+        border-bottom: 2px solid #dee2e6;
+    }
+    &__link {
+        background: #0d1d31;
+        padding: 0 2rem;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        width: 170px;
+        height: 130px;
+        font-size: 1.375rem;
+        font-family: "Fester-Bold", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+        border-radius: 5px;
+        border: 0;
+    }
+    &__link::before {
+        position: absolute;
+        content: "";
+        height: 50px;
+        width: 2px;
+        background: #d5d8da;
+        left: 50%;
+        bottom: -50px;
+        transform: translateX(-50%);
+    }
+}

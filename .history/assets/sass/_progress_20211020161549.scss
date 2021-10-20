@@ -1,0 +1,11 @@
+.progress {
+    background: #263548;
+    color: #fff;
+    padding-bottom: 48px;
+    &__title {
+        font-family: "Fester-Bold", sans-serif;
+        font-size: 1.75rem;
+        text-align: center;
+        padding: 3rem 0;
+    }
+}

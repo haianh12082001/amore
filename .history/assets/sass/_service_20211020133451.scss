@@ -1,0 +1,83 @@
+.service {
+    width: 100%;
+
+    padding-top: 48px;
+    color: #fff;
+    position: relative;
+    &__container {
+        padding-bottom: 66px;
+    }
+    &__slogan {
+        text-align: center;
+        font-size: 16px;
+        // position: relative;
+    }
+    &__name {
+        font-family: "Fester-Bold", sans-serif;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        border: 1px solid #fff;
+        width: 243px;
+        padding: 30px 25px 10px 25px;
+    }
+    &__des {
+        height: 80px;
+    }
+    &__img {
+        width: 55px;
+        height: 50px;
+        object-fit: contain;
+        margin-top: 10px;
+    }
+    &__extend {
+        padding-top: 48px;
+        a {
+            position: relative;
+            text-transform: uppercase;
+            color: #fff;
+        }
+    }
+    @include maxWidth(768px) {
+        &__container {
+            flex-wrap: wrap;
+        }
+        &__item {
+            width: 50%;
+        }
+    }
+}
+.service::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url(../img/Group178.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.service__extend a::before {
+    content: "";
+    position: absolute;
+    background: #0d1d31;
+    top: 50%;
+    left: -5%;
+    height: 100%;
+    width: 15%;
+    opacity: 0.6;
+}
+.service__item:hover {
+    background: #fdb813;
+}
