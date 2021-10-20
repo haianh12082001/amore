@@ -102,24 +102,11 @@
     border: 1px solid #c4c4c4;
     position: absolute;
     z-index: 50;
-    cursor: pointer;
 }
 .btn {
     color: #c4c4c4;
 }
-.nextFeedback,
-.prevFeedback {
-    cursor: pointer;
-}
-.click__left:hover {
-    background: linear-gradient(#fdb813, #fd8313);
-}
-.click__right:hover {
-    background: linear-gradient(#fdb813, #fd8313);
-}
-.prevFeedback:hover {
-    background: linear-gradient(#fdb813, #fd8313);
-}
-.nextFeedback:hover {
-    background: linear-gradient(#fdb813, #fd8313);
+.project1 .click__left,
+.project1 .click__right :hover {
+    background: red;
 }
