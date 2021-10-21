@@ -13,11 +13,6 @@
     font-display: swap;
     src: url("/assets/fonts/word/Lato\ Light.ttf") format("truetype");
 }
-@font-face {
-    font-family: "Roboto";
-    font-display: swap;
-    src: url("/assets/fonts/word/Roboto-Regular.ttf") format("truetype");
-}
 .container {
     max-width: 1230px;
     padding: 0 15px;
@@ -149,11 +144,11 @@
     outline: none;
 }
 .title {
-    // margin-top: 14px;
+    margin-top: 14px;
     text-transform: uppercase;
-    line-height: 36.87px !important;
+    line-height: 36.87px;
     font-family: "Fester";
-    font-size: 30px !important;
+    font-size: 30px;
 }
 p {
     margin-bottom: 16px;

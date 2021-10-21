@@ -72,13 +72,13 @@ img {
 }
 .header__list {
   display: flex;
-  column-gap: 37px;
+  column-gap: 35px;
   align-items: center;
   height: 70px;
 }
 .header__link {
   font-size: 16px;
-  font-family: "Lato";
+  font-family: "Fester";
   color: #ffff;
   font-weight: 700;
 }
@@ -238,6 +238,11 @@ img {
   font-display: swap;
   src: url("/assets/fonts/word/Lato Light.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("/assets/fonts/word/Roboto-Regular.ttf") format("truetype");
+}
 .container {
   max-width: 1230px;
   padding: 0 15px;
@@ -369,8 +374,10 @@ img {
 }
 
 .title {
-  margin-top: 14px;
   text-transform: uppercase;
+  line-height: 36.87px !important;
+  font-family: "Fester";
+  font-size: 30px !important;
 }
 
 p {
@@ -990,12 +997,13 @@ p {
   font-size: 16px;
 }
 .service__name {
-  font-family: "Fester-Bold", sans-serif;
+  font-family: "Fester";
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 700;
   height: 50px;
   margin-bottom: 10px;
+  line-height: 22px;
 }
 .service__container {
   display: flex;
@@ -1022,6 +1030,9 @@ p {
   position: relative;
   text-transform: uppercase;
   color: #fff;
+  font-family: "Fester";
+  font-size: 14px;
+  line-height: 17.21px;
 }
 @media screen and (max-width: 768px) {
   .service__container {
@@ -1072,7 +1083,6 @@ p {
   padding-bottom: 48px;
 }
 .progress__title {
-  font-family: "Fester-Bold", sans-serif;
   font-size: 1.75rem;
   text-align: center;
   padding: 3rem 0;
@@ -1261,10 +1271,8 @@ textarea .form__control {
 .feedback__title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.8rem;
   color: #fff;
-  font-family: "Fester-Bold", sans-serif;
-  padding: 48px 0 24px;
+  padding: 54px 0 24px;
 }
 .feedback__list {
   padding: 0 50px;
@@ -1370,11 +1378,9 @@ textarea .form__control {
 }
 .news__title {
   text-transform: uppercase;
-  font-size: 1.8rem;
   color: #fff;
-  font-family: "Fester-Bold", sans-serif;
   text-align: center;
-  padding: 3rem 0 1.5rem 0;
+  padding: 3.5rem 0 1.5rem 0;
 }
 .news__slick {
   display: flex;
@@ -1403,6 +1409,8 @@ textarea .form__control {
 }
 .news__kind {
   text-align: center;
+  font-family: "Roboto";
+  font-weight: 400;
 }
 .news__name {
   text-align: center;
@@ -1417,6 +1425,8 @@ textarea .form__control {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   color: #fff;
+  font-family: "Roboto";
+  font-weight: 500;
 }
 .news__button {
   justify-content: center;
@@ -1425,6 +1435,9 @@ textarea .form__control {
   border-radius: 50px;
   color: #fff;
   transition: ease-in-out 0.2s;
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #fdb813;
 }
 @media screen and (max-width: 768px) {
   .news .news {
@@ -1459,7 +1472,8 @@ textarea .form__control {
   color: #fff;
   font-size: 1rem;
   text-transform: uppercase;
-  font-family: "Lato-Bold", sans-serif;
+  font-family: "Lato";
+  font-weight: 700;
   margin-bottom: 20px;
 }
 .footer p {
@@ -1487,7 +1501,6 @@ textarea .form__control {
 }
 .footer__icons a {
   border: 1px solid #999;
-  padding: 8px;
   border-radius: 50%;
 }
 @media screen and (max-width: 992px) {
@@ -1497,6 +1510,18 @@ textarea .form__control {
   .footer__content {
     padding-bottom: 35px;
   }
+}
+
+.footer__icons .fb {
+  padding: 9px 12px;
+}
+
+.footer__icons .ig {
+  padding: 9px 10px;
+}
+
+.footer__icons .yt {
+  padding: 9px 8px;
 }
 
 /*# sourceMappingURL=app.css.map */

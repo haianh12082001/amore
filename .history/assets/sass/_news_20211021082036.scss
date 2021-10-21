@@ -9,7 +9,7 @@
         color: #fff;
 
         text-align: center;
-        padding: 3.5rem 0 1.5rem 0;
+        padding: 3rem 0 1.5rem 0;
     }
     &__slick {
         display: flex;
@@ -44,8 +44,6 @@
     }
     &__kind {
         text-align: center;
-        font-family: "Roboto";
-        font-weight: 400;
     }
     &__name {
         text-align: center;
@@ -61,8 +59,6 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         color: #fff;
-        font-family: "Roboto";
-        font-weight: 500;
     }
     &__button {
         justify-content: center;
@@ -71,9 +67,6 @@
         border-radius: 50px;
         color: #fff;
         transition: ease-in-out 0.2s;
-        font-family: "Roboto";
-        font-weight: 500;
-        color: #fdb813;
     }
     @include maxWidth(768px) {
         .news {

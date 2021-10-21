@@ -22,8 +22,7 @@
         color: #fff;
         font-size: 1rem;
         text-transform: uppercase;
-        font-family: "Lato";
-        font-weight: 700;
+        font-family: "Lato-Bold", sans-serif;
         margin-bottom: 20px;
     }
     p {
@@ -50,8 +49,12 @@
         margin-top: 30px;
         a {
             border: 1px solid #999;
-            // padding: 8px;
+            padding: 8px;
             border-radius: 50%;
+            .fb {
+                padding-left: 3px;
+                padding-right: 3px;
+            }
         }
     }
     @include maxWidth(992px) {
@@ -62,13 +65,4 @@
             padding-bottom: 35px;
         }
     }
-}
-.footer__icons .fb {
-    padding: 9px 12px;
-}
-.footer__icons .ig {
-    padding: 9px 10px;
-}
-.footer__icons .yt {
-    padding: 9px 8px;
 }
