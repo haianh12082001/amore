@@ -226,22 +226,22 @@ img {
 @font-face {
   font-family: "Fester";
   font-display: swap;
-  src: url("/assets/fonts/word/Fester Bold.otf") format("truetype");
+  src: url("../assets/fonts/word/Fester Bold.otf") format("truetype");
 }
 @font-face {
   font-family: "Lato";
   font-display: swap;
-  src: url("/assets/fonts/word/Lato Medium.ttf") format("truetype");
+  src: url("../assets/fonts/word/Lato Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lato-light";
   font-display: swap;
-  src: url("/assets/fonts/word/Lato Light.ttf") format("truetype");
+  src: url("../assets/fonts/word/Lato Light.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
   font-display: swap;
-  src: url("/assets/fonts/word/Roboto-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/word/Roboto-Regular.ttf") format("truetype");
 }
 .container {
   max-width: 1230px;
