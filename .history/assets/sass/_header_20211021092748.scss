@@ -93,10 +93,10 @@
             font-family: "Fester";
         }
         &__item {
-            // text-transform: uppercase;
             border-bottom: 1px #555 solid;
             padding: 1rem 0;
             &--list {
+                text-transform: uppercase;
                 display: block;
                 height: auto;
                 position: relative;

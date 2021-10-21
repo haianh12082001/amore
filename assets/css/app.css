@@ -121,9 +121,9 @@ img {
     background: #263548;
     z-index: 999;
     transition: all 0.2s;
+    font-family: "Fester";
   }
   .header__item {
-    text-transform: uppercase;
     border-bottom: 1px #555 solid;
     padding: 1rem 0;
   }
@@ -141,6 +141,7 @@ img {
   }
   .header__item--link {
     border: none;
+    font-family: "Fester";
   }
   .header__icon {
     display: block;
@@ -152,6 +153,9 @@ img {
 }
 .header__list.active {
   transform: translateX(0);
+}
+.header__item:last-child {
+  display: none;
 }
 
 .menu__container {

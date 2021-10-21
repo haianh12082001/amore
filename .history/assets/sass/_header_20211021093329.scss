@@ -110,7 +110,8 @@
             }
             &--link {
                 border: none;
-                font-family: "Fester";
+                // font-family: "Fester";
+                transform: none;
             }
         }
         &__icon {

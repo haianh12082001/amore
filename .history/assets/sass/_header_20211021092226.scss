@@ -90,10 +90,9 @@
             background: #263548;
             z-index: 999;
             transition: all 0.2s;
-            font-family: "Fester";
         }
         &__item {
-            // text-transform: uppercase;
+            text-transform: uppercase;
             border-bottom: 1px #555 solid;
             padding: 1rem 0;
             &--list {
@@ -110,7 +109,6 @@
             }
             &--link {
                 border: none;
-                font-family: "Fester";
             }
         }
         &__icon {
@@ -124,7 +122,7 @@
     &__list.active {
         transform: translateX(0);
     }
-    &__item:last-child {
+    .header__item:last-child {
         display: none;
     }
 }

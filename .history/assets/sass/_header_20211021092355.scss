@@ -90,10 +90,9 @@
             background: #263548;
             z-index: 999;
             transition: all 0.2s;
-            font-family: "Fester";
         }
         &__item {
-            // text-transform: uppercase;
+            text-transform: uppercase;
             border-bottom: 1px #555 solid;
             padding: 1rem 0;
             &--list {
