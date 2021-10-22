@@ -1,0 +1,17 @@
+.tabProduct {
+    &__box {
+        width: 80%;
+        margin: 0 auto;
+        border: 1px solid #e5e5e5;
+        padding: 13px;
+    }
+}
+.tabProduct__item img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+.tabProduct__nav {
+    display: flex !important;
+    column-gap: 20px;
+}

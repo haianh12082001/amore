@@ -1,0 +1,17 @@
+.tabIntroduce {
+    &__container {
+        padding: 24px 15px;
+        color: #212529;
+    }
+    &__content {
+        border: 1px solid #e5e5e5;
+        padding: 0.8rem;
+    }
+    .sapo {
+        background: #e5e5e5;
+        border: 1px #ccc dashed;
+        padding: 10px;
+        font-style: italic;
+        margin: 16px 0;
+    }
+}

@@ -1,0 +1,13 @@
+.implementation {
+    &__container {
+        padding: 15px 24px;
+    }
+    &__title {
+        text-align: center;
+        background: #0d1d31;
+        padding: 12px 16px 8px;
+        font-family: "Fester";
+        border-radius: 0 10px;
+        text-transform: uppercase;
+    }
+}

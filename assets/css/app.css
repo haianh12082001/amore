@@ -14,7 +14,6 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background: #212529;
   color: #fff;
 }
 
@@ -32,6 +31,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 img {
@@ -150,12 +150,16 @@ img {
     align-self: flex-end;
     column-gap: 20px;
   }
+  .header__icon i {
+    display: flex;
+    align-items: flex-end;
+  }
+  .header__item:last-child {
+    display: none;
+  }
 }
 .header__list.active {
   transform: translateX(0);
-}
-.header__item:last-child {
-  display: none;
 }
 
 .menu__container {
@@ -227,6 +231,15 @@ img {
     width: 100%;
   }
 }
+.bg-breadcrumb {
+  background: #e5e5e5;
+}
+
+.breadcrumb {
+  background-color: #e5e5e5;
+  margin: 0;
+}
+
 @font-face {
   font-family: "Fester";
   font-display: swap;
@@ -437,6 +450,13 @@ p {
 
 .slick-dots .slick-active button {
   background: #fdb813;
+}
+
+.truncate {
+  overflow: hidden;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 .banner {
@@ -987,6 +1007,179 @@ p {
   background: linear-gradient(#fdb813, #fd8313);
 }
 
+.implementation__container {
+  padding: 24px 15px;
+}
+.implementation__title {
+  position: relative;
+  text-align: center;
+  background: #0d1d31;
+  padding: 12px 16px 8px;
+  font-family: "Fester";
+  border-radius: 0 10px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.implementation__title::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  top: 5px;
+  left: 0;
+  border: 1px solid #1a1a1a;
+  border-right: 0;
+  border-radius: 0 10px;
+  z-index: -1;
+}
+.implementation__box {
+  position: relative;
+  overflow: hidden;
+}
+.implementation__img {
+  position: relative;
+}
+.implementation__img img {
+  border-radius: 8px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.implementation__img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: #0d1d3180;
+  transform: scale(0);
+  transition: all 0.3s;
+}
+.implementation__box:hover .implementation__img::before {
+  transform: scale(1);
+}
+.implementation__text {
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  z-index: 3;
+  color: #fff;
+  width: 100%;
+  padding: 16px;
+  transition: all 0.3s;
+  font-size: 1rem;
+  transition-delay: 0.3s;
+}
+.implementation__text p {
+  font-size: 14px;
+}
+.implementation__name {
+  text-transform: uppercase;
+  margin-top: 13px;
+  text-align: center;
+  font-family: "Fester";
+  font-size: 20px;
+  -webkit-line-clamp: 2;
+}
+.implementation__box:hover .implementation__name {
+  color: #ef9139;
+}
+.implementation__box:hover a {
+  text-decoration: none;
+}
+.implementation__box:hover .implementation__text {
+  left: 0;
+}
+
+.tabIntroduce__container {
+  padding: 24px 15px;
+  color: #212529;
+}
+.tabIntroduce__content {
+  border: 1px solid #e5e5e5;
+  padding: 0.8rem;
+  box-shadow: #e5e5e5 0px 8px 16px 0px;
+}
+.tabIntroduce .sapo {
+  background: #e5e5e5;
+  border: 1px #ccc dashed;
+  padding: 10px;
+  font-style: italic;
+  margin: 16px 0;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.ul__share {
+  display: flex;
+  align-items: center;
+}
+.ul__share li {
+  padding-right: 8px;
+}
+.ul__share li:first-child {
+  padding-right: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.ul__share button {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+}
+.ul__share .facebook {
+  background: #3b5997;
+}
+.ul__share .twitter {
+  background: #1da1f2;
+}
+.ul__share .instagram {
+  background: #dc3472;
+}
+.ul__share .linkedin {
+  background: #0077b5;
+}
+
+.comments {
+  display: flex;
+  justify-content: space-between;
+}
+
+select {
+  background-color: #f5f6f7;
+}
+
+.comments__content {
+  display: flex;
+  margin-bottom: 30px;
+}
+.comments__content img {
+  margin-right: 10px;
+  width: 49px;
+  height: 49px;
+}
+.comments__content textarea {
+  width: 100%;
+}
+
+.fb__min {
+  background: #3b5997;
+  color: #fff;
+  border: none;
+  font-size: 10px;
+}
+
 .service {
   width: 100%;
   padding-top: 48px;
@@ -1079,6 +1272,163 @@ p {
 .service__item:hover .service__img {
   filter: brightness(0) invert(1);
   transform: scale(1.1);
+}
+
+.tabService__container {
+  padding: 24px 15px;
+}
+.tabService__title {
+  position: relative;
+  text-align: center;
+  background: #0d1d31;
+  padding: 12px 16px 8px;
+  font-family: "Fester";
+  border-radius: 0 10px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.tabService__title::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  top: 5px;
+  left: 0;
+  border: 1px solid #1a1a1a;
+  border-right: 0;
+  border-radius: 0 10px;
+  z-index: -1;
+}
+.tabService__box {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+.tabService__img {
+  position: relative;
+  z-index: 1;
+}
+.tabService__img img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.tabService__date {
+  position: absolute;
+  background: linear-gradient(to right, #4685d6, #122235);
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 17px;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tabService__content {
+  padding: 25px 15px 15px 15px;
+  color: #212529;
+}
+.tabService__name {
+  text-transform: uppercase;
+  -webkit-line-clamp: 1;
+  font-weight: 700;
+  margin: 10px 0;
+  font-size: 20px;
+  color: #000;
+}
+.tabService__des {
+  -webkit-line-clamp: 3;
+}
+.tabService__view {
+  font-size: 15px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #4685d6, #122235);
+  transition: ease-in-out 0.2s;
+}
+.tabService__right {
+  padding: 0 15px 0 48px;
+}
+@media screen and (max-width: 768px) {
+  .tabService__right {
+    padding: 0 15px;
+    margin-top: 30px;
+  }
+}
+
+.box__border {
+  border: 1px solid #ccc;
+  padding: 13px;
+}
+
+.category__title {
+  text-align: center;
+  background: #0d1d31;
+  padding: 12px 16px 8px;
+  position: relative;
+  border-radius: 0 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Fester";
+  margin: 16px 0;
+}
+.category__title::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  top: 5px;
+  left: 0;
+  border: 1px solid #1a1a1a;
+  border-right: 0;
+  border-radius: 0 10px;
+  z-index: -1;
+}
+
+.catalog {
+  list-style: disc;
+  padding: 0 30px;
+  color: #212529;
+}
+
+.catalog li {
+  padding: 5px 0;
+}
+
+.posts {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  padding-bottom: 0.4rem;
+  border-bottom: 0.5px solid #e5e5e5;
+  margin: 0.6rem 0;
+}
+.posts__img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  padding-top: 4px;
+  margin-right: 8px;
+}
+.posts__content {
+  color: #212529;
+  flex: 1;
+}
+.posts__name {
+  -webkit-line-clamp: 2;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 5px;
+  line-height: 19px;
+}
+.posts__calendar {
+  padding: 7px 0;
 }
 
 .progress {
@@ -1193,6 +1543,99 @@ p {
     margin: 0 15px;
   }
 }
+.tabProduct__container {
+  padding: 24px 15px;
+}
+.tabProduct__box {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #e5e5e5;
+  padding: 13px;
+}
+.tabProduct__info {
+  color: #212529;
+}
+.tabProduct__info p {
+  font-size: 14.4px;
+}
+.tabProduct__title {
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  -webkit-line-clamp: 1;
+  font-family: "Fester";
+  margin: 24px 0;
+}
+
+.tabContent {
+  position: relative;
+}
+
+.tabProduct__item img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .tabProduct__item img {
+    height: 220px;
+  }
+}
+
+.tabProduct__list {
+  margin-bottom: 30px;
+}
+
+.product2 {
+  padding: 2px;
+}
+
+.tabProduct__nav {
+  margin: 0 30px;
+}
+@media screen and (max-width: 768px) {
+  .tabProduct__nav {
+    margin: 0 20px;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  color: #000;
+  display: inline-block;
+}
+
+.slick-prev {
+  position: absolute;
+  left: -20px;
+  bottom: 34%;
+}
+
+.slick-next {
+  position: absolute;
+  right: -20px;
+  bottom: 34%;
+}
+
+@media screen and (max-width: 767px) {
+  .slick-next,
+.slick-prev {
+    bottom: 24%;
+  }
+}
+.slick-current > img {
+  object-fit: cover;
+  cursor: pointer;
+  padding: 2px;
+  border: 1px solid #fff;
+  border-color: #1a1a1a;
+}
+
+.product2 {
+  cursor: pointer;
+}
+
 .contact {
   width: 100%;
   position: relative;
@@ -1265,6 +1708,26 @@ textarea .form__control {
   color: #000;
   background: linear-gradient(#fdb813, #fd8313);
   font-weight: 700;
+}
+
+.contactMe__container {
+  padding: 24px 15px 32px 15px;
+}
+.contactMe__content--company {
+  font-family: "Fester";
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.contactMe .row {
+  padding: 15px 15px 0 15px;
+}
+.contactMe .contact__form {
+  background: #0d1d31;
+  padding: 30px;
+}
+.contactMe .form__control {
+  background: #fff;
+  color: #000;
 }
 
 .feedback {
@@ -1516,6 +1979,10 @@ textarea .form__control {
   .footer__content {
     padding-bottom: 35px;
   }
+}
+
+.footer__icons i {
+  color: #999;
 }
 
 .footer__icons .fb {
